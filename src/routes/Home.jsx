@@ -12,7 +12,7 @@ export default function Home() {
     { id: '6', image: '/img/6.png' },
   ]
   return (
-    <div>
+    <main className='conteudo'>
       <div className='botaoWhatsapp'>
       <a href="https://api.whatsapp.com/send?phone=551123397412" target='Blank'><img src="/img/logoWhatsapp.png" alt="botao whatsapp" /></a>
       </div>
@@ -31,6 +31,6 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-    </div>
+    </main>
   )
 }
