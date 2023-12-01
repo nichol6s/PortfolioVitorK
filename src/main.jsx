@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './routes/Home.jsx';
@@ -12,6 +12,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+import 'swiper/css/effect-coverflow'
+
 
 const router = createBrowserRouter([
   {path: '/', element: <App/>,
