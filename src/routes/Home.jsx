@@ -6,18 +6,18 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   const data = [
-    { id: '1', image: '/img/banner1.png' },
-    { id: '2', image: '/img/banner2.png' },
-    { id: '3', image: '/img/banner3.png' },
-    { id: '4', image: '/img/banner4.png' },
-    { id: '5', image: '/img/banner5.png' },
-    { id: '6', image: '/img/banner6.png' },
+    { id: '1', image: 'https://i.ibb.co/xStjkPM/banner1.png '},
+    { id: '2', image: 'https://i.ibb.co/q0FZH5L/banner2.png' },
+    { id: '3', image: 'https://i.ibb.co/jVFDRb4/banner3.png' },
+    { id: '4', image: 'https://i.ibb.co/r4s2NFR/banner4.png' },
+    { id: '5', image: 'https://i.ibb.co/9n384Kk/banner5.png' },
+    { id: '6', image: 'https://i.ibb.co/sjwdKHq/banner6.png' },
   ]
   const modelosBorda = [
-    { id: '1', image: '/img/Borda1.png'},
-    { id: '2', image: '/img/Borda2.png'},
-    { id: '3', image: '/img/Borda3.png'},
-    { id: '4', image: '/img/Borda4.png'},
+    { id: '1', image: 'https://i.ibb.co/gZ0F2QG/Borda1.png'},
+    { id: '2', image: 'https://i.ibb.co/N7x5N09/Borda2.png'},
+    { id: '3', image: 'https://i.ibb.co/ZLBd3WR/Borda3.png'},
+    { id: '4', image: 'https://i.ibb.co/2Z8mBQX/Borda4.png'},
   ]
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
           {data.map( (item) => (
             
               <SwiperSlide key={item.id}>
-              <Link to={"https://api.whatsapp.com/send?phone=551123397412"} activeClassName="current" target='Blank'>
+              <Link to={"#borda"} activeClassName="current">
               <img 
               src={item.image} 
               alt="slider"
@@ -47,21 +47,20 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-      
-        <div className='conteudoBordas'>
+        <div className='conteudoBordas' id='borda'>
           <div className='topoBordas'>
             <h1>Bordas</h1>
             <div className='linha'></div>
           </div>
           <div className='infoBordas'>
             <div className='textoBorda'>
-                <p>
-                Eleve o charme da sua área de lazer com os incríveis pisos e bordas da Linha Riviera. Elegância e praticidade, o toque exclusivo que sua piscina merece! 💦✨ #RivieraStyle #PiscinaComEstilo
+                <p>           
+                  Bordas de piscina <span>anti-derrapantes</span> e <span>atérmicas</span> , que garantem o conforto e a segurança mantendo a sofisticação. Confira os modelos abaixo
                 </p>
             </div>
             
             <div className='imagem'>
-              <img src="/img/imgBorda.jpg" alt="imagem borda" height="360" width="520"/>
+              <img src="https://i.ibb.co/bJVTqSg/imgBorda.jpg" alt="imagem borda" height="360" width="520"/>
             </div>
             
           </div>
@@ -97,6 +96,23 @@ export default function Home() {
       </div>
       <div className='botaoSaibaMais'>
       <Link to={"https://api.whatsapp.com/send?phone=551123397412"} activeClassName="current" target='Blank'>Saiba mais</Link>
+      </div>
+      <div className='infoPisos'>
+      <div className='topoBordas'>
+            <h1>Pisos</h1>
+            <div className='linha'></div>
+      </div>
+          <div className='infoBordas'>
+            
+            <div className='imagem'>
+              <img src="https://i.ibb.co/K00kkyH/Avante-Pisos-ALTA-19.jpg" alt="imagem piso" height="360" width="520"/>
+            </div>
+            <div className='textoBorda'>
+                <p>
+                  Mantendo o padrão de suas bordas, compre nossos pisos direto da fábrica, compre agora e receba <span>até 10%</span> de desconto!
+                </p>
+            </div>  
+          </div>
       </div>
     </main>
   )
