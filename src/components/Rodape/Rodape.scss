@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #04D8D9;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 34.75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+p{
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 17.571px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.rodapeConteudo{
+    margin-top: 20px;
+}
+.rodapeConteudo, .iconesRedes{
+    display: flex;
+    flex-direction: row;
+}
+
+.redesSociais, .atendimento{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.infoAtendimento{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 60px;
+    }
+    p{
+        margin-left: 10px;
+    }
+}
+.iconesRedes{
+    align-items: center;
+    justify-content: center;
+}
+
+.icones{
+    margin: 20px;
+}
+
+.linha{
+    height: 1px;
+    width: 30%;
+    background-color: #04D9D8;
+    margin-bottom: 6%;
+}
+.linhacentro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.rodapeInfo{
+    display: flex;
+    flex-direction:row ;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    img{
+        height: 60px;
+    }
+    p{
+        margin-left: 10px;
+    }
+}

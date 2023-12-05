@@ -36,7 +36,7 @@ export default function Home() {
           {data.map( (item) => (
             
               <SwiperSlide key={item.id}>
-              <Link to={"#borda"} activeClassName="current">
+              <Link activeClassName="current">
               <img 
               src={item.image} 
               alt="slider"
@@ -47,7 +47,7 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-        <div className='conteudoBordas' id='borda'>
+        <div className='conteudoBordas'>
           <div className='topoBordas'>
             <h1>Bordas</h1>
             <div className='linha'></div>
@@ -113,7 +113,17 @@ export default function Home() {
                 </p>
             </div>  
           </div>
+          <div className='galeriaPisos'>
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+          <div className='botaoSaibaMais'>
+          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} activeClassName="current" target='Blank'>Saiba mais</Link>
       </div>
+      </div>
+
     </main>
   )
 }
