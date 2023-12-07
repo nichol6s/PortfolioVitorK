@@ -6,15 +6,20 @@
 .swiper-button-prev{
     --swiper-theme-color: #04D9D8;
 }
-.slide-item{
-    min-width: 100%;
+.galeriaBordas .slide-item, .galeriaPisos .slide-item{
+    min-width: 0px !important;
+    height: 30vh;
 }
 
+
+.swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+}
 .botaoWhatsapp{
     position: fixed;
     z-index: 1000;
-
-    bottom: 20px;
+    bottom: 20px;   
     right: 20px;
     img{
         height: 90px;
@@ -45,10 +50,10 @@
 }
 .conteudoBordas{
     background-color: #000;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
 }
 
-.topoBordas{
+.topoBordas , .topoPisos{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,42 +63,80 @@
         font-family: Montserrat, sans-serif;
         font-size: 38px;
         font-weight: 400;
-        margin-bottom: 8px;
+        margin-bottom: 2px;
+        margin-top: 20px;
     }
     .linha{
         height: 1px;
         width: 30%;
         background-color: #04D9D8;
-        margin-bottom: 6%;
+        margin-bottom: 2%;
     }
 }
-.infoBordas{
+.infoBordas {
     display:flex;
     width: 100%;
-    
-    
-    
+    height: 40vh;
     .imagem{
         display:flex;
-        width: 50%;
-        justify-content: center;
+        width: 35%;
+        justify-content: left;
+        margin-left: 2% ;
+        img{
+            height: 100%;
+        }
     }
     .textoBorda{
         display:flex;
         width: 50%;
-        justify-content: center;
+        justify-content: right;
     }
     
     p{
     color: #FFF;
-    text-shadow: 0px 4.239px 4.239px rgba(0, 0, 0, 0.50);
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    text-align: right;
+    margin-left: 18%;
+    margin-right: 2%;
+        span{
+            font-weight: 800;
+        }
+}
+}
+.infoPisos{
+    display:flex;
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 10px;
+    .imagemPiso{
+        display:flex;
+        width: 50%;
+        justify-content: right;
+        margin-right: 2% ;
+        img{
+            height: 100%;
+            
+        }
+    }
+    .textoPisos{
+        display:flex;
+        width: 50%;
+        justify-content: left; 
+    }
+    
+    .textoPisos-p{
+    color: #ffffff;
     font-family: Montserrat, sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 100;
     line-height: normal;
     text-align: left;
-    margin-inline: 12%;
+    margin-left: 2%;
         span{
             font-weight: 800;
         }
@@ -105,6 +148,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 1%;
     margin-bottom: 4%;
     a{
         background-color: #04D9D8;
@@ -122,12 +166,23 @@
     }
 }
 
-.infoPisos{
+.conteudoPisos{
     margin-top: 4%;
-    padding-bottom: 4%;
-    background-color: #eeeeee;
+    padding-bottom: 2%;
+    background-color: #575757;
     h1, p{
-        color: #000;
+        color: #ffffff;
         text-shadow: none;
+    }
+}
+
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+    background-image: none !important;
+}
+
+.review{
+    padding-top: 20px;
+    .elfsight-app-c1c6da59-90e0-489f-8dc0-e1747e2d3e9b .Main__Container-sc-1w4nyzp-0 a{
+        display: none !important;
     }
 }
