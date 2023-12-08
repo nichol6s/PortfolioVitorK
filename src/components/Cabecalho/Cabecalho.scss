@@ -10,3 +10,13 @@
         margin-left: 20px;
     }
 }
+
+@media only screen and (max-width: 600px){
+    .cabecalho{
+        justify-content: center;
+        img{
+            height: 6vh;
+            margin-left: 0;
+        }
+    }
+}

@@ -11,8 +11,11 @@
     height: 30vh;
 }
 
+.swiper_Banner .slide-item{
+    width: 100%;
+}
 
-.swiper-slide {
+.swiper_galeriaBorda .swiper-slide, .swiper_galeriaPiso .swiper-slide{
     display: flex !important;
     justify-content: center !important;
 }
@@ -84,6 +87,7 @@
         margin-left: 2% ;
         img{
             height: 100%;
+            width: 100%;
         }
     }
     .textoBorda{
@@ -184,5 +188,55 @@
     padding-top: 20px;
     .elfsight-app-c1c6da59-90e0-489f-8dc0-e1747e2d3e9b .Main__Container-sc-1w4nyzp-0 a{
         display: none !important;
+    }
+}
+
+.swiper_galeriaVideos{
+    height: 40vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .infoBordas{
+        flex-direction: column-reverse;
+    }
+    .infoPisos{
+        flex-direction: column;
+    }
+    .infoBordas , .infoPisos{
+        height: 100%;
+        .imagem, .imagemPiso{
+            width: 100%;
+            justify-content: center;
+            padding: 2%;
+            margin: 0;
+            img{
+                height: 80%;
+                width: 80%;
+                
+            }
+        }
+        .textoBorda, .textoPisos{
+            width: 100%;
+            justify-content: center;
+        }
+        
+        p, .textoPisos-p{
+        text-align: center;
+        padding-inline: 2%;
+        margin-inline: 0px;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 100;
+        line-height: normal;
+        span{
+            font-weight: 800;
+        }
+    }
+}
+    .swiper_Banner .slide-item{
+        width: 170% !important;
+}
+    .review{
+        margin-inline: 50px;
     }
 }

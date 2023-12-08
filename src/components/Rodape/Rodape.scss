@@ -41,3 +41,15 @@ p{
         margin-left: 10px;
     }
 }
+
+@media only screen and (max-width: 600px){
+    .rodapeInfo{
+        img{
+            height: 40px;
+        }
+        p{
+            margin-left: 10px;
+            font-size: 10px;
+        }
+    }
+}

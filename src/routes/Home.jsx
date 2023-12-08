@@ -29,11 +29,11 @@ export default function Home() {
     { id: '5', image: 'https://i.ibb.co/7Vq24XS/grelha.png'},
   ]
   const videos = [
-    { id: '1', image: "https://vimeo.com/892301939"},
-    { id: '2', image: '/img/Piso60.png'},
-    { id: '3', image: '/img/Piso75.png'},
-    { id: '4', image: '/img/Piso100.png'},
-    { id: '5', image: '/img/grelha.png'},
+    { id: '1', image: 'https://youtu.be/CV591Gom088'},
+    { id: '2', image: 'https://youtu.be/8ekvneeLolc'},
+    { id: '3', image: 'https://youtube.com/shorts/tIEWeT7-ris?feature=share'},
+    { id: '4', image: 'https://youtube.com/shorts/wXMFijfZ0E8?feature=share'},
+    { id: '5', image: 'https://youtube.com/shorts/W2tbU6zNfUQ?feature=share'},
   ]
 
   return (
@@ -48,9 +48,9 @@ export default function Home() {
         navigation
         loop={true}
         autoplay={{ delay: 5000 }}
+        className='swiper_Banner'
         >
           {data.map( (item) => (
-            
               <SwiperSlide key={item.id}>
               <Link activeClassName="current">
               <img 
@@ -85,7 +85,24 @@ export default function Home() {
             effect={ 'coverflow' }
             centeredSlides={ true }
             loop={ true }
-            slidesPerView={3}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 40
+              },
+              992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }
+            }}
             coverflowEffect={
               {
                 rotate: 5,
@@ -94,6 +111,7 @@ export default function Home() {
                 modifier: 2,
               }}
             navigation
+            autoplay={{ delay: 5000 }}
             className='swiper_galeriaBorda'
             
           >
@@ -130,8 +148,26 @@ export default function Home() {
           <Swiper
             effect={ 'coverflow' }
             centeredSlides={ true }
+            autoplay={{ delay: 5000 }}
             loop={ true }
-            slidesPerView={3}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 40
+              },
+              992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }
+            }}
             coverflowEffect={
               {
                 rotate: 5,
@@ -171,7 +207,25 @@ export default function Home() {
             effect={ 'coverflow' }
             centeredSlides={ true }
             loop={ true }
-            slidesPerView={3}
+            autoplay={{ delay: 5000 }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 30
+              },
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 40
+              },
+              992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }
+            }}
             coverflowEffect={
               {
                 rotate: 5,
