@@ -1,22 +1,31 @@
-.cabecalho{
-    display: flex;
-    background-color: #000;
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-    img{
-        height: 10vh;
-        margin-top: 12px;
-        margin-bottom: 12px;
-        margin-left: 20px;
+.cabecalho {
+    position: fixed;
+    padding-top: 3vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    h1{
+        margin-left: 30px;
+        color: #fff;
+        font-family: 'League Spartan', sans-serif;
+        
     }
 }
 
-@media only screen and (max-width: 600px){
-    .cabecalho{
-        justify-content: center;
-        img{
-            height: 6vh;
-            margin-left: 0;
-        }
+.menu {
+    margin-right: 30px;
+    display:flex;
+    flex-direction: column;
+
+    .traco1, .traco2, .traco3{
+        width: 40px;
+        height: 3px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #110367;
     }
 }

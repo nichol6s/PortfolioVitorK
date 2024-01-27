@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
-import {AiFillHome as H} from "react-icons/ai";
 import './Cabecalho.scss'
 
 export default function Cabecalho() {
   return (
     <>
       <header className="cabecalho">
-        <img src="./LogoCNome.png" alt="Logo" />
+        <div className="logo">
+          <h1>VITOR KUBICA</h1>
+        </div>
+        <div className="menu">
+          <div className="traco1"></div>
+          <div className="traco2"></div>
+          <div className="traco3"></div>
+        </div>
       </header>
     </>
   );
