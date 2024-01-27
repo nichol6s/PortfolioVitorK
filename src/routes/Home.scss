@@ -1,7 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 .conteudo {
     background-color: #4643DF;
     background: linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%);
     height: 100vh;
+    .apresentacao {
+        display: flex;
+        .imagem {
+            display: flex;
+            align-items: center;   
+            height: 100vh;
+            margin-right: 19%;
+
+            img{
+                border: 3px solid #EEE8DC ;
+            }
+        }
+        
+    }
+
 }
 
-// linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%)
+.textoap {
+    display: flex;
+    flex-direction: column;
+    columns: 1;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 10vh;
+    h1 {
+        font-family: 'League Spartan', sans-serif;
+        color: #F8F8F8;
+        font-size: 5vw; 
+        width: 70%;
+    }
+    p {
+        font-family: 'League Spartan', sans-serif;
+        color: #F8F8F8;
+        font-size: 2vw; 
+        margin-top: 30px;
+    }
+    a {
+        display: flex;
+        margin-top: 30px;
+        text-decoration: none;
+        border: 1px solid;
+        width: 45%;
+        p {
+            margin: 20px;
+            margin-left: 40px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+        }
+        .seta{
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            .setacorpo {
+            background-color: #F8F8F8;
+            height: 3px;
+            width: 70%;
+        }
+        .setacabeca{
+            position: absolute;
+            padding: 5px;
+            box-shadow: 2px -2px 0 1px #ffffff inset;
+            border: solid transparent;
+            border-width: 0 0 2px 2px;
+            transform: rotate(-135deg);
+        }
+        }
+        
+    }
+
+}
