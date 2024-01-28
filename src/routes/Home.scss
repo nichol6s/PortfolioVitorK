@@ -1,7 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 .conteudo {
     background-color: #4643DF;
     background: linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%);
-    height: 100vh;
+    height: 100%;
+    .apresentacao {
+        display: flex;
+        .imagem {
+            display: flex;
+            align-items: center;   
+            height: 100vh;
+            margin-right: 19%;
+
+            .foto{
+                border: 3px solid #EEE8DC ;
+                position: relative;
+                z-index: 2;
+            }
+            .elementosfundo{
+                position: absolute;
+                right: 170px;
+            }
+        }
+        
+    }
+
 }
 
-// linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%)
+.textoap {
+    display: flex;
+    flex-direction: column;
+    columns: 1;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 10vh;
+    h1 {
+        font-family: 'League Spartan', sans-serif;
+        color: #F8F8F8;
+        font-size: 5vw; 
+        width: 70%;
+    }
+    p {
+        font-family: 'League Spartan', sans-serif;
+        color: #F8F8F8;
+        font-size: 2vw; 
+        margin-top: 30px;
+    }
+    .botaovermais {
+        background-color: #4643DF;
+        display: flex;
+        margin-top: 30px;
+        text-decoration: none;
+        border: 1px solid  #F8F8F8;
+        width: 45%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        scroll-behavior: smooth;
+        p {
+            margin: 20px;
+            margin-left: 40px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+        }
+        .seta{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .setacorpo{
+            width: 50%; /* Largura total da seta (cabeça + corpo) */
+            height: 3px; /* Altura da seta */
+            background-color:  #F8F8F8; /* Cor de fundo do corpo da seta */
+            position: relative;
+        }
+        .setacorpo::before {
+            display: flex;
+            justify-content: center;
+            content: "";
+            position: absolute;
+            top: 50%; /* Ajusta a posição vertical para o meio */
+            transform: translateY(-50%); /* Ajusta a posição vertical para o meio */
+            left: 100%;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-radius: 20%;
+            border-left: 8px solid #F8F8F8; /* Cor da cabeça da seta */
+          }
+    }
+
+    .botaovermais::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        transform: translateX(-100%);
+        transition: all .3s;
+        z-index: -1;
+    }
+    .botaovermais:hover::before {
+        transform: translateX(0);
+    }
+    .botaovermais:hover{
+        p, h1{
+            color: #4643DF;
+            transition: 0.5s;
+        }
+        .setacorpo{
+            background-color: #4643DF;
+            transition: 0.5s;
+        }
+        .setacorpo::before{
+            border-left: 8px solid #4643DF;
+            transition: 0.5s;
+        }
+        
+    }  
+}
+
+.sobremim{
+    height: 100vh;
+    background-color: #EEE8DC;
+    display: flex;
+    
+    .imagemsobremim{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        .imgsm{
+            margin-top: 10%;
+            height: 80%;
+            margin-bottom: 10%;
+        }
+    }
+    .conteudosobremim{
+        display: flex;
+        flex-direction: column;
+        columns: 1;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin-right: 10%;
+
+        h1 {
+            text-align: center;
+            font-family: 'League Spartan', sans-serif;
+            color: #555555;
+            font-size: 5vw; 
+            width: 70%;
+        }
+        p {
+            font-family: 'League Spartan', sans-serif;
+            color: #555555;
+            font-size: 2vw; 
+            text-align: center;
+            margin: 30px;
+
+        }
+    }
+
+    .botoes{
+        display: flex;
+    }
+
+    .buttoncontato{
+        margin-inline: 20px;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid #4643DF;
+        background-color: #EEE8DC;
+        overflow: hidden;
+
+        .buttoncontato__text{
+            width: 100%;
+            text-align: center;
+            color: #555555;
+            font-weight: 600;
+        }
+    }
+
+    .buttoncontato:hover{
+        background-color: #4643DF;
+        transition: 0.6s;
+        .buttoncontato__text{
+            color: #F8F8F8;
+            transition: 1s;
+        }
+    }
+    .buttondwnld {
+        margin-inline: 20px;
+        position: relative;
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid #4643DF;
+        background-color: #EEE8DC;
+        overflow: hidden;
+
+    }
+    
+    .buttondwnld, .buttondwnld__icon, .buttondwnld__text {
+        transition: all 0.3s;
+    }
+    
+    .buttondwnld .buttondwnld__text {
+        transform: translateX(22px);
+        color: #555555;
+        font-weight: 600;
+    }
+    
+    .buttondwnld .buttondwnld__icon {
+        position: absolute;
+        transform: translateX(109px);
+        height: 100%;
+        width: 39px;
+        background-color: #4643DF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .buttondwnld .svg {
+        width: 20px;
+        fill: #fff;
+    }
+    
+    .buttondwnld:hover {
+        background: #4643DF;
+    }
+    
+    .buttondwnld:hover .buttondwnld__text {
+        color: transparent;
+    }
+    
+    .buttondwnld:hover .buttondwnld__icon {
+        width: 148px;
+        transform: translateX(0);
+    }
+    
+    .buttondwnld:active .buttondwnld__icon {
+        background-color: #ffffff;
+    }
+    
+    .buttondwnld:active {
+        border: 1px solid #ffffff;
+    }
+
+}
+
