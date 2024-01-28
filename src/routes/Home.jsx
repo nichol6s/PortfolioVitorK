@@ -7,10 +7,12 @@ import imgsm from '/img/imagemsobremim.webp'
 import Headline from '../Headline';
 
 export default function Home() {
-  const ref = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
 
   const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' });
+    ref1.current?.scrollIntoView({ behavior: 'smooth' });
+    ref2.current?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <main className='conteudo'>
@@ -31,7 +33,8 @@ export default function Home() {
           <img src={element} alt='elementos' className='elementosfundo'/>
         </div>
       </section>
-      <section className='sobremim' ref={ref}>
+      <section className='sobremim' >
+        <Headline ref={ref1}></Headline>
         <div className='imagemsobremim'>
             <img src={imgsm} alt='img sobre mim' className='imgsm'/>
         </div>
