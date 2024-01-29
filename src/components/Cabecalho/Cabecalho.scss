@@ -40,7 +40,11 @@
         opacity: 0;
         transition: opacity 0.5s ease-in; /* Define a opacidade como 0 quando a classe scrolling é aplicada */
     }
-    
+
+}
+
+.cabecalho.scrolled{
+    display: none;
 }
 
 

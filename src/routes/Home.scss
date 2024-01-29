@@ -1,68 +1,81 @@
+// Import de fontes
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-
+// Estilos para o conteúdo principal
 .conteudo {
-    background-color: #4643DF;
     background: linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%);
-    section{
+    
+    // Estilos para as seções
+    section {
         height: 100vh;
         scroll-snap-align: start;
     }
+    
+    // Estilos para a seção de apresentação
     .apresentacao {
         display: flex;
         overflow-x: hidden;
+        
+        // Estilos para a imagem na apresentação
         .imagem {
             display: flex;
             align-items: center;   
-            height: 100vh;
+            height: 100%;
             margin-right: 30%;
 
-            .foto{
-                border: 3px solid #EEE8DC ;
+            .foto {
+                border: 3px solid #EEE8DC;
                 position: relative;
+                max-height: 60%;
                 z-index: 2;
                 left: 10%;
             }
-            .elementosfundo{
+
+            .elementosfundo {
                 position: relative;
+                max-height: 70%;
                 z-index: 1;
-                right: 41%;
+                right: 42%;
             }
         }
-        
     }
-
 }
 
+// Estilos para o texto na apresentação
 .textoap {
     display: flex;
     flex-direction: column;
     columns: 1;
     justify-content: center;
     margin-left: 10vh;
+
     h1 {
         font-family: 'League Spartan', sans-serif;
         color: #F8F8F8;
         font-size: 5vw; 
         width: 70%;
     }
+
     p {
         font-family: 'League Spartan', sans-serif;
         color: #F8F8F8;
         font-size: 2vw; 
         margin-top: 30px;
     }
+
     .botaovermais {
+        // Estilos para o botão "Ver Mais"
         background-color: #4643DF;
         display: flex;
         margin-top: 30px;
         text-decoration: none;
-        border: 1px solid  #F8F8F8;
+        border: 1px solid #F8F8F8;
         width: 60%;
         position: relative;
         overflow: hidden;
         z-index: 1;
         scroll-behavior: smooth;
+
         p {
             margin: 20px;
             margin-left: 40px;
@@ -72,36 +85,41 @@
             text-align: center;
             width: 50%;
         }
-        .seta{
+
+        .seta {
             height: 100%;
             width: 60%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .setacorpo{
-            width: 50%; /* Largura total da seta (cabeça + corpo) */
-            height: 3px; /* Altura da seta */
-            background-color:  #F8F8F8; /* Cor de fundo do corpo da seta */
+
+        // Estilos para a seta do botão "Ver Mais"
+        .setacorpo {
+            width: 50%;
+            height: 3px;
+            background-color: #F8F8F8;
             position: relative;
         }
+
         .setacorpo::before {
             display: flex;
             justify-content: center;
             content: "";
             position: absolute;
-            top: 50%; /* Ajusta a posição vertical para o meio */
-            transform: translateY(-50%); /* Ajusta a posição vertical para o meio */
+            top: 50%;
+            transform: translateY(-50%);
             left: 100%;
             width: 0;
             height: 0;
             border-top: 6px solid transparent;
             border-bottom: 6px solid transparent;
             border-radius: 20%;
-            border-left: 8px solid #F8F8F8; /* Cor da cabeça da seta */
-          }
+            border-left: 8px solid #F8F8F8;
+        }
     }
 
+    // Efeitos de hover para o botão "Ver Mais"
     .botaovermais::before {
         content: "";
         position: absolute;
@@ -114,42 +132,50 @@
         transition: all .3s;
         z-index: -1;
     }
+
     .botaovermais:hover::before {
         transform: translateX(0);
     }
-    .botaovermais:hover{
-        p, h1{
+
+    .botaovermais:hover {
+        p, h1 {
             color: #4643DF;
             transition: 0.5s;
         }
-        .setacorpo{
+
+        .setacorpo {
             background-color: #4643DF;
             transition: 0.5s;
         }
-        .setacorpo::before{
+
+        .setacorpo::before {
             border-left: 8px solid #4643DF;
             transition: 0.5s;
         }
-        
-    }  
+    }
 }
 
-.sobremim{
+// Estilos para a seção "Sobre Mim"
+.sobremim {
     background-color: #EEE8DC;
     display: flex;
-    
-    .imagemsobremim{
+
+    // Estilos para a imagem na seção "Sobre Mim"
+    .imagemsobremim {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 50%;
-        .imgsm{
+
+        .imgsm {
             margin-top: 10%;
             height: 80%;
             margin-bottom: 10%;
         }
     }
-    .conteudosobremim{
+
+    // Estilos para o conteúdo na seção "Sobre Mim"
+    .conteudosobremim {
         display: flex;
         flex-direction: column;
         columns: 1;
@@ -165,17 +191,18 @@
             font-size: 5vw; 
             width: 70%;
         }
+
         p {
             font-family: 'League Spartan', sans-serif;
             color: #555555;
             font-size: 2vw; 
             text-align: center;
             margin: 30px;
-
         }
     }
 
-    .botoes{
+    // Estilos para os botões na seção "Sobre Mim"
+    .botoes {
         display: flex;
     }
 
@@ -226,7 +253,7 @@
     }
     
     .buttondwnld .buttondwnld__text {
-        transform: translateX(22px);
+        transform: translateX(12px);
         color: #555555;
         font-weight: 600;
     }
@@ -270,3 +297,84 @@
 
 }
 
+// Estilos para as seções "XP" e "AC"
+.XpAc {
+    background-color: #4643DF;
+    display: flex;
+    flex-direction: column;
+    columns: 1;
+    justify-content: center;
+    align-items: center;
+
+    // Estilos para as seções "XP" e "AC" individualmente
+    .XP, .AC {
+        display: flex;
+        margin-inline: 10%;
+
+        img {
+            height: 60%;
+        }
+
+        h1 {
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: 5vw; 
+            text-align: justify;
+        }
+
+        p {
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: 1.5vw; 
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .actxt {
+            margin-left: 20%;
+        }
+
+        .xptxt {
+            margin-right: 20%;
+        }
+    }
+
+    .AC {
+        margin-top: 2%;
+    }
+}
+
+.projetos{
+    background-color: #cfcabf;
+    .elementoprojeto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-height: 10%;
+        z-index: 1;
+        top: 13%;
+        width: 100%;
+        h1{
+            position: absolute;
+            z-index: 3;
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: 4vw; 
+            padding-top: 2%;
+            text-align: center;
+        }
+        img{
+            position: absolute;
+            z-index: 2;
+        }
+    }
+    .conteudoprojeto{
+        position: relative;
+        background-color: #EEE8DC;
+        margin-top: 7%;
+        margin-inline: 5%;
+        height: 80vh;
+        display: flex;
+    }
+}

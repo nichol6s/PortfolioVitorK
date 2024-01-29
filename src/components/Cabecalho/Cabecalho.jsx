@@ -4,33 +4,16 @@ import './Cabecalho.scss';
 
 export default function Cabecalho() {
   const [menuAberto, setMenuAberto] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
   };
 
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <>
       <header className={`cabecalho ${menuAberto ? 'menu-aberto' : ''}`}>
         <Link to="/" className="logo">
-          <h1><span className={`vlogo ${scrolling ? 'scrolling' : ''}`}>V</span><span className={`klogo ${scrolling ? 'scrolling' : ''}`}>K</span></h1>
+          <h1>VITOR KUBICA</h1>
         </Link>
         <div className="mobile-menu" onClick={toggleMenu}>
           <div className="line1"></div>
