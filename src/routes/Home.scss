@@ -1,25 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+
 .conteudo {
     background-color: #4643DF;
     background: linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%);
-    height: 100%;
+    section{
+        height: 100vh;
+        scroll-snap-align: start;
+    }
     .apresentacao {
         display: flex;
+        overflow-x: hidden;
         .imagem {
             display: flex;
             align-items: center;   
             height: 100vh;
-            margin-right: 19%;
+            margin-right: 30%;
 
             .foto{
                 border: 3px solid #EEE8DC ;
                 position: relative;
                 z-index: 2;
+                left: 10%;
             }
             .elementosfundo{
-                position: absolute;
-                right: 170px;
+                position: relative;
+                z-index: 1;
+                right: 41%;
             }
         }
         
@@ -32,7 +39,6 @@
     flex-direction: column;
     columns: 1;
     justify-content: center;
-    height: 100vh;
     margin-left: 10vh;
     h1 {
         font-family: 'League Spartan', sans-serif;
@@ -52,7 +58,7 @@
         margin-top: 30px;
         text-decoration: none;
         border: 1px solid  #F8F8F8;
-        width: 45%;
+        width: 60%;
         position: relative;
         overflow: hidden;
         z-index: 1;
@@ -129,7 +135,6 @@
 }
 
 .sobremim{
-    height: 100vh;
     background-color: #EEE8DC;
     display: flex;
     
