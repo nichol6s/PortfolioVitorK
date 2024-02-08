@@ -6,9 +6,19 @@
   import elementoap from '/img/elementoap.svg'
   import elementoprjt from '/img/elementoprjt.svg'
   import imgsm from '/img/imagemsobremim.webp'
+  import { Link } from 'react-router-dom';
+  import { Swiper, SwiperSlide} from 'swiper/react';
 
 
   export default function Home() {
+    const data = [
+      { id: '1', hd: "lalala",p: "lalala",  image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
+      { id: '2', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
+      { id: '3', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
+      { id: '4', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
+      { id: '5', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
+    ]
+    
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const [projetoAberto, setProjetoAberto] = useState('projetos');
@@ -99,6 +109,55 @@
             <button className='setaVoltarBotao' onClick={handleSetaVoltar}>
             <div className='setaVoltar'></div>
             </button>
+            <div className='galeriaProjetosF'>
+          <Swiper
+          effect={ 'coverflow' }
+          centeredSlides={ true }
+          // autoplay={{ delay: 5000 }}
+          loop={ true }
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 40
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }
+          }}
+          coverflowEffect={
+            {
+              rotate: 3,
+              stretch: 6,
+              depth: 6,
+              modifier: 2,
+            }}
+          navigation
+          className='swiper_galeriaProjetos'
+          >
+            {data.map(item => (
+        <SwiperSlide key={item.id} className='swiper-slider-div'>
+          <img
+            src={item.image}
+            alt="slider"
+            className="slide-item"
+          />
+          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} className="conteudoProjetosF">
+            <h1>{item.hd}</h1>
+            <p>{item.p}</p>
+          </Link>
+        </SwiperSlide>
+      ))}
+          </Swiper>
+          </div>
           </div>
             <div className='projetosfront'>
               <h1>FRONT-END</h1>

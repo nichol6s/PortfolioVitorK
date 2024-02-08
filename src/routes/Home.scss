@@ -1,6 +1,59 @@
 // Import de fontes
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
+.swiper-pagination-bullet{
+    --swiper-theme-color: #04D9D8;
+}
+.swiper-button-next{
+    --swiper-theme-color: #04D9D8;
+    --swiper-navigation-size:34px;  
+}
+.swiper-button-prev{
+    --swiper-theme-color: #04D9D8;
+    --swiper-navigation-size:34px;
+}
+.galeriaProjetosF .slide-item{
+    min-width: 0px !important;
+    height: 30vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.galeriaProjetosF{
+    margin-top: 7vh;
+    width: 100% !important; 
+    height: 60% !important;
+    display: flex !important;
+    justify-content: center !important;
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        img {
+            height: 100%;
+        }
+    }
+}
+.projetos .conteudoprojeto h1{
+    font-size: 3vw !important;
+}
+.projetos .conteudoprojeto p{
+    color: #cfcabf !important;
+}
+.swiper-slider-div{
+    display: flex !important;
+    height: 70% !important;
+    flex-direction: column !important;
+    a{
+        margin-top: 10px;
+        text-decoration: none;
+    }
+}
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right{
+    background-image:none !important;
+}
 // Estilos para o conteúdo principal
 .conteudo {
     background: linear-gradient(90deg, #4643DF 67%, #F8F8F8 33%);
