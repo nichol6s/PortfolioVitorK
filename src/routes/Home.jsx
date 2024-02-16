@@ -6,22 +6,40 @@
   import elementoap from '/img/elementoap.svg'
   import elementoprjt from '/img/elementoprjt.svg'
   import imgsm from '/img/imagemsobremim.webp'
+  import avanttilp from '/img/AvanttiLP.webp'
+  import helpfila from '/img/Helpfila.webp'
+  import contabilizador from '/img/Contabilizador.webp'
+  import fiagro from '/img/Fiagro.webp'
+
   import { Link } from 'react-router-dom';
   import { Swiper, SwiperSlide} from 'swiper/react';
 
 
   export default function Home() {
     const data = [
-      { id: '1', hd: "lalala",p: "lalala",  image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
-      { id: '2', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
-      { id: '3', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
-      { id: '4', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
-      { id: '5', hd: "lalala",p: "lalala", image: 'https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png'},
-    ]
+      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
+      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
+      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
+      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+    ];
+    
+    const dataBack = [
+      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
+      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
+      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
+      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+    ];
     
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const [projetoAberto, setProjetoAberto] = useState('projetos');
+
+    const [widths, setWidths] = useState({
+      front: '100%',
+      back: '100%',
+      projectsFront: '0',
+      projectsBack: '0'
+    });
 
     const handleClick = (ref) => {
       if (ref == 'ref1'){
@@ -39,10 +57,33 @@
       a.click();
     };
   
-    const handleSetaVoltar = () => {
-      setProjetoAberto('front-end');
+    const handleFrontButtonClick = () => {
+      setWidths({
+        front: '0',
+        back: '0',
+        projectsFront: '100%',
+        projectsBack: '0'
+      });
     };
-
+  
+    const handleBackButtonClick = () => {
+      setWidths({
+        front: '0',
+        back: '0',
+        projectsFront: '0',
+        projectsBack: '100%'
+      });
+    };
+  
+    const handleBackArrowClick = () => {
+      setWidths({
+        front: '100%',
+        back: '100%',
+        projectsFront: '0',
+        projectsBack: '0'
+      });
+    };
+    
     return (
       <main className='conteudo'>
         <section className='apresentacao' id='section1'>
@@ -105,41 +146,17 @@
           <h1>{projetoAberto === 'projetos' ? 'PROJETOS' : 'Front-End'}</h1>
           </div>
           <div className="conteudoprojeto" >
-          <div className='FrontprojetosAberto'>
-            <button className='setaVoltarBotao' onClick={handleSetaVoltar}>
+          <div className='FrontprojetosAberto' style={{ width: widths.projectsFront }}>
+          <button className='setaVoltarBotao' onClick={handleBackArrowClick} style={{ display: parseInt(widths.projectsFront) === 0 ? 'none' : 'block' }}>
             <div className='setaVoltar'></div>
-            </button>
+          </button>
             <div className='galeriaProjetosF'>
           <Swiper
           effect={ 'coverflow' }
           centeredSlides={ true }
-          // autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 5000 }}
           loop={ true }
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20
-            },
-            480: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 40
-            },
-            992: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
-          }}
-          coverflowEffect={
-            {
-              rotate: 3,
-              stretch: 6,
-              depth: 6,
-              modifier: 2,
-            }}
+          slidesPerView={1}
           navigation
           className='swiper_galeriaProjetos'
           >
@@ -159,32 +176,93 @@
           </Swiper>
           </div>
           </div>
-            <div className='projetosfront'>
+            <div className='projetosfront' style={{ width: widths.front }}>
               <h1>FRONT-END</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. </p>
-              <button id='botaofront' className='botaovermais'>
+              <button id='botaofront' className='botaovermais' onClick={handleFrontButtonClick}>
               <p>Conhecer</p>
               <div className='seta'>
                 <div className='setacorpo'></div>
               </div>
             </button>
             </div>
-            <div className='projetosback'>
+            <div className='projetosback' style={{ width: widths.back }}>
             <h1>BACK-END/DATABASE</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. </p>
-              <button id='botaoback' className='botaovermais'>
+              <button id='botaoback' className='botaovermais'  onClick={handleBackButtonClick}>
               <p>Conhecer</p>
               <div className='seta'>
                 <div className='setacorpo'></div>
               </div>
             </button>
             </div>
-            <div className='BackprojetosAberto'>
-            <p>projetos back</p>
+            <div className='BackprojetosAberto' style={{ width: widths.projectsBack}} >
+            <button className='setaVoltarBotao' onClick={handleBackArrowClick} style={{ display: parseInt(widths.projectsBack) === 0 ? 'none' : 'block' }}>
+              <div className='setaVoltar'></div>
+            </button>
+            <div className='galeriaProjetosF'>
+          <Swiper
+          effect={ 'coverflow' }
+          centeredSlides={ true }
+          autoplay={{ delay: 5000 }}
+          loop={ true }
+          slidesPerView={1}
+          navigation
+          className='swiper_galeriaProjetos'
+          >
+            {dataBack.map(item => (
+        <SwiperSlide key={item.id} className='swiper-slider-div'>
+          <img
+            src={item.image}
+            alt="slider"
+            className="slide-item"
+          />
+          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} className="conteudoProjetosF">
+            <h1>{item.hd}</h1>
+            <p>{item.p}</p>
+          </Link>
+        </SwiperSlide>
+      ))}
+          </Swiper>
           </div>
           </div>
+          </div>
+        </section>
+        <section className='formulario'>
+          <div className='cabecalhoforms'>
+          <h1>
+          Se interessou?
+          </h1>
+          <p>Mande um email para conversarmos mais</p>
+          </div>
+        <div class="card">
+          <form class="form">
+            <div className='juncao'>
+              <div class="group">
+              <input placeholder="‎" type="text" required=""/>
+              <label for="name">Name</label>
+              </div>
+              <div className=''></div>
+          <div class="group">
+              <input placeholder="‎" type="email" id="email" name="email" required=""/>
+              <label for="email">Email</label>
+              </div>
+            </div>
+          <div class="group">
+              <textarea placeholder="‎" id="comment" name="comment" rows="5" required=""></textarea>
+              <label for="comment">Comment</label>
+          </div>
+          <div className='espacoB'>
+            <button className='botaovermais'>
+              <p>Enviar</p>
+              <div className='seta'>
+                <div className='setacorpo'></div>
+              </div>
+            </button>
+          </div>
           
-          
+            </form>
+        </div>
         </section>
       </main>
     )

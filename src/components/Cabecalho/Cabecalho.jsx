@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './Cabecalho.scss';
 
@@ -9,10 +9,20 @@ export default function Cabecalho() {
     setMenuAberto(!menuAberto);
   };
 
+  const handleClick = (ref) => {
+    if (ref == 'ref1'){
+      ref1.current?.scrollIntoView({ behavior: 'smooth' });
+    } if (ref == 'ref2') {
+      ref2.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+    
+};
+
+
   return (
     <>
       <header className={`cabecalho ${menuAberto ? 'menu-aberto' : ''}`}>
-        <Link to="/" className="logo">
+        <Link onClick={() => handleClick('ref1')} className="logo">
           <h1>VITOR KUBICA</h1>
         </Link>
         <div className="mobile-menu" onClick={toggleMenu}>
