@@ -242,7 +242,7 @@
               <input placeholder="‎" type="text" required=""/>
               <label for="name">Name</label>
               </div>
-              <div className='espaco'></div>
+              <div className=''></div>
           <div class="group">
               <input placeholder="‎" type="email" id="email" name="email" required=""/>
               <label for="email">Email</label>
@@ -253,7 +253,7 @@
               <label for="comment">Comment</label>
           </div>
           <div className='espacoB'>
-            <button onClick={() => handleClick('ref1')} className='botaovermais'>
+            <button className='botaovermais'>
               <p>Enviar</p>
               <div className='seta'>
                 <div className='setacorpo'></div>
