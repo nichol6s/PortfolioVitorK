@@ -23,6 +23,13 @@
       { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
     ];
     
+    const dataBack = [
+      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
+      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
+      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
+      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+    ];
+    
     const ref1 = useRef(null);
     const ref2 = useRef(null);
     const [projetoAberto, setProjetoAberto] = useState('projetos');
@@ -147,33 +154,9 @@
           <Swiper
           effect={ 'coverflow' }
           centeredSlides={ true }
-          // autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 5000 }}
           loop={ true }
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20
-            },
-            480: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 40
-            },
-            992: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
-          }}
-          coverflowEffect={
-            {
-              rotate: 3,
-              stretch: 6,
-              depth: 6,
-              modifier: 2,
-            }}
+          slidesPerView={1}
           navigation
           className='swiper_galeriaProjetos'
           >
@@ -221,37 +204,13 @@
           <Swiper
           effect={ 'coverflow' }
           centeredSlides={ true }
-          // autoplay={{ delay: 5000 }}
+          autoplay={{ delay: 5000 }}
           loop={ true }
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20
-            },
-            480: {
-              slidesPerView: 2,
-              spaceBetween: 30
-            },
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 40
-            },
-            992: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            }
-          }}
-          coverflowEffect={
-            {
-              rotate: 3,
-              stretch: 6,
-              depth: 6,
-              modifier: 2,
-            }}
+          slidesPerView={1}
           navigation
           className='swiper_galeriaProjetos'
           >
-            {data.map(item => (
+            {dataBack.map(item => (
         <SwiperSlide key={item.id} className='swiper-slider-div'>
           <img
             src={item.image}
@@ -270,41 +229,40 @@
           </div>
         </section>
         <section className='formulario'>
-        <form class="form">
-    
-    <div class="flex">
-        <label>
-            <input required="" placeholder="" type="text" class="input"/>
-            <span>first name</span>
-        </label>
-
-        <label>
-            <input required="" placeholder="" type="text" class="input"/>
-            <span>last name</span>
-        </label>
-    </div>  
-            
-    <label>
-        <input required="" placeholder="" type="email" class="input"/>
-        <span>email</span>
-    </label> 
-        
-    <label>
-        <input required="" type="tel" placeholder="" class="input"/>
-        <span>contact number</span>
-    </label>
-    <label>
-        <textarea required="" rows="3" placeholder="" class="input01"></textarea>
-        <span>message</span>
-    </label>
-    
-    <button class="fancy" href="#">
-      <span class="top-key"></span>
-      <span class="text">submit</span>
-      <span class="bottom-key-1"></span>
-      <span class="bottom-key-2"></span>
-    </button>
-</form>
+          <div className='cabecalhoforms'>
+          <h1>
+          Se interessou?
+          </h1>
+          <p>Mande um email para conversarmos mais</p>
+          </div>
+        <div class="card">
+          <form class="form">
+            <div className='juncao'>
+              <div class="group">
+              <input placeholder="‎" type="text" required=""/>
+              <label for="name">Name</label>
+              </div>
+              <div className='espaco'></div>
+          <div class="group">
+              <input placeholder="‎" type="email" id="email" name="email" required=""/>
+              <label for="email">Email</label>
+              </div>
+            </div>
+          <div class="group">
+              <textarea placeholder="‎" id="comment" name="comment" rows="5" required=""></textarea>
+              <label for="comment">Comment</label>
+          </div>
+          <div className='espacoB'>
+            <button onClick={() => handleClick('ref1')} className='botaovermais'>
+              <p>Enviar</p>
+              <div className='seta'>
+                <div className='setacorpo'></div>
+              </div>
+            </button>
+          </div>
+          
+            </form>
+        </div>
         </section>
       </main>
     )
