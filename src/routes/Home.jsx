@@ -10,7 +10,6 @@
   import helpfila from '/img/Helpfila.webp'
   import contabilizador from '/img/Contabilizador.webp'
   import fiagro from '/img/Fiagro.webp'
-
   import { Link } from 'react-router-dom';
   import { Swiper, SwiperSlide} from 'swiper/react';
   import emailjs from '@emailjs/browser';
@@ -18,17 +17,17 @@
 
   export default function Home() {
     const data = [
-      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
-      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
-      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
-      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp, link:'https://avantti-lp.vercel.app/' },
+      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila, link:'https://help-fila.vercel.app/' },
+      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador, link:'https://masseira.vercel.app/' },
+      { id: '4', hd: "fiagro", p: "lalala", image: fiagro, link:'https://fiagro.vercel.app/' },
     ];
     
     const dataBack = [
-      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
-      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
-      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
-      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+      { id: '1', hd: "Biblioteca Java", p: "lalala", image: avanttilp, link:'https://github.com/VitorKubica/ProjetoBiblioteca' },
+      { id: '2', hd: "Projeto ML", p: "lalala", image: helpfila, link:'https://github.com/VitorKubica/MachineLearningIntro' },
+      { id: '3', hd: "Database", p: "lalala", image: contabilizador, link:'/' },
+      { id: '4', hd: "Bot Automação", p: "lalala", image: fiagro, link:'/' },
     ];
     
     const ref1 = useRef(null);
@@ -43,6 +42,7 @@
     });
 
     const handleClick = (ref) => {
+        preventDefault()
       if (ref == 'ref1'){
         ref1.current?.scrollIntoView({ behavior: 'smooth' });
       } if (ref == 'ref2') {
@@ -140,7 +140,7 @@
             <h1>SOBRE MIM</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
             <div className='botoes'>
-              <button className="buttoncontato" type="button">
+              <button className="buttoncontato" type="button" onClick={() => handleClick('ref2')}>
                 <span className="buttoncontato__text">Contato</span>
               </button>
               <button className="buttondwnld" type="button" onClick={handleDownload}>
@@ -150,7 +150,7 @@
             </div>
           </div>
         </section>
-        <section className='XpAc' ref={ref2} id='section3'>
+        <section className='XpAc' id='section3'>
           <div className='XP'>
             <div className='xptxt'>
               <h1>Experiência</h1>
@@ -197,7 +197,7 @@
             alt="slider"
             className="slide-item"
           />
-          <Link to={"https://api.whatsapp.com/send?phone=11940138704"} className="conteudoProjetosF">
+          <Link to={item.link} target='_Blank' className="conteudoProjetosF">
             <h1>{item.hd}</h1>
             <p>{item.p}</p>
           </Link>
@@ -258,7 +258,7 @@
           </div>
           </div>
         </section>
-        <section className='formulario'>
+        <section className='formulario' ref={ref2}>
           <div className='cabecalhoforms'>
           <h1>
           Se interessou?
