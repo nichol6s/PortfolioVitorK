@@ -22,7 +22,7 @@ export default function Cabecalho() {
   return (
     <>
       <header className={`cabecalho ${menuAberto ? 'menu-aberto' : ''}`}>
-        <Link onClick={() => handleClick('ref1')} className="logo">
+        <Link onClick={() => handleClick(ref2)} className="logo">
           <h1>VITOR KUBICA</h1>
         </Link>
         <div className="mobile-menu" onClick={toggleMenu}>
@@ -32,10 +32,11 @@ export default function Cabecalho() {
         </div>
       </header>
       <div className={`menu-conteudo ${menuAberto ? 'menu-aberto' : ''}`}>
-        <Link to="/">Página Inicial</Link>
-        <Link to="/sobre">Sobre</Link>
-        <Link to="/contato">Contato</Link>
+        <Link to="/">Sobre mim</Link>
+        <Link to="/">Projetos</Link>
+        <Link to="/">Contato</Link>
       </div>
+      
     </>
   );
 }

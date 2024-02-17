@@ -107,19 +107,20 @@
     h1 {
         font-family: 'League Spartan', sans-serif;
         color: #F8F8F8;
-        font-size: 5vw; 
+        font-size:5vw ; 
         width: 70%;
     }
 
     p {
         font-family: 'League Spartan', sans-serif;
         color: #F8F8F8;
-        font-size: 2vw; 
+        font-size: 2vw ; 
         margin-top: 30px;
     }
 
     .botaovermais {
         // Estilos para o botão "Ver Mais"
+        cursor: pointer;
         background-color: #4643DF;
         display: flex;
         margin-top: 30px;
@@ -364,7 +365,7 @@
     // Estilos para as seções "XP" e "AC" individualmente
     .XP, .AC {
         display: flex;
-        margin-inline: 10%;
+        width: 80%;
 
         img {
             height: 60%;
@@ -376,13 +377,19 @@
             font-size: 5vw; 
             text-align: justify;
         }
-
+        h2{
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: 1.8vw; 
+            text-align: justify;
+            margin-top: 1%;
+        }
         p {
             font-family: 'League Spartan', sans-serif;
             color: #F8F8F8;
             font-size: 1.5vw; 
             margin-top: 30px;
-            text-align: justify;
+            text-align: left;
         }
 
         .actxt {
@@ -390,7 +397,7 @@
         }
 
         .xptxt {
-            margin-right: 20%;
+            margin-right: 15%;
         }
     }
 
@@ -400,6 +407,11 @@
 }
 
 .projetos{
+    .projetosAll{
+        display: flex;
+        width: 100%;
+        transition: 1s;
+    }
     background-color: #cfcabf;
     .projetosfront, .projetosback{
         display: flex;
@@ -459,6 +471,7 @@
 
     .botaovermais {
         // Estilos para o botão "Ver Mais"
+        cursor: pointer;
         background-color: transparent;
         display: flex;
         align-items: center;
@@ -574,6 +587,7 @@
 
 
 .setaVoltarBotao, .setaVoltarBotaoBack{
+    cursor: pointer;
     margin-top: 5%;
     margin-left: 3%;
     width:4%;
@@ -757,6 +771,7 @@
     }
     .botaovermais {
         // Estilos para o botão "Ver Mais"
+        cursor: pointer;
         background-color: transparent;
         display: flex;
         align-items: center;
@@ -846,4 +861,254 @@
             transition: 0.5s;
         }
     }
+}
+
+@media only screen and (max-width: 650px) {
+    .XpAc .XP img, .XpAc .AC img{
+        display: none;
+    }
+    
+    .conteudo .apresentacao{
+        flex-direction: column-reverse;
+    }
+    .apresentacao {
+        background-color: #4643DF;
+        .imagem {  
+            height: 50% !important;
+            margin-right: 0%;
+            .foto {
+                height: 80% !important;
+                left: 32% !important;
+            }
+            .elementosfundo {
+                height: 80% !important;
+                right: 80% !important;
+            }
+        }
+    }
+    .textoap {
+        margin-left: 6vh;
+        margin-bottom: 25%;
+        width: 100%;
+    
+        h1 {
+            font-size:calc(4vw + 20px) ; 
+            
+        }
+    
+        p {
+            font-size: calc(1.5vw + 20px) ; 
+            margin-top: 15px;
+        }
+        .botaovermais {
+            // Estilos para o botão "Ver Mais
+            margin-top: 30px;
+            width: 50%;
+            p {
+                margin-left: 30px;
+                width: 50%;
+                font-size: 16px;
+            }
+    
+            
+}}
+
+.sobremim {
+    flex-direction: column-reverse;
+    .imagemsobremim {
+        width: 100%;
+        height: 40%;
+    }
+
+    // Estilos para o conteúdo na seção "Sobre Mim"
+    .conteudosobremim {
+        width: 100%;
+        height: 50%;
+        margin-right: 10%;
+        h1 {
+            font-size: calc(5vw + 12px);
+        }   
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+            font-size: calc(2vw + 10px); 
+        }
+    }
+    .buttoncontato{
+        margin-inline: 5px;
+        height: 100%;
+    }
+    .buttondwnld {
+        margin-inline: 5px;
+    }
+    
+}
+
+.XpAc {
+    justify-content: center;
+    align-items: center;
+
+    // Estilos para as seções "XP" e "AC" individualmente
+    .XP, .AC {
+        display: flex;
+        
+        h1 {
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: calc(5vw + 18px);
+            text-align: left;
+        }
+        h2{
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: calc(1.8vw + 12px); 
+            text-align: left;
+            margin-top: 1%;
+        }
+        p {
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: calc(1.5vw + 8px); 
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .actxt {
+            margin-left: 0%;
+            margin-top: 15%;
+        }
+
+        .xptxt {
+            margin-right: 0%;
+            width: 100%;
+        }
+    }
+
+    .AC {
+        margin-top: 2%;
+    }
+}
+
+.projetos{
+    .elementoprojeto{
+        width: 100%;
+        h1{
+            font-size: calc(4vw + 16px); 
+        }
+        img{
+            width: 30vh;
+        }
+    }
+    .conteudoprojeto{
+        flex-direction: column;
+        h1{
+            font-size: calc(4vw + 16px) !important;  
+            width: 80%;
+        }
+        p {
+            font-size: calc(1.5vw + 16px); 
+            padding-top: 0%;
+            margin-top: 2%;
+        }
+    }
+    .projetosback{
+        margin-top: 10%;
+
+    }
+
+    .botaovermais {
+
+        p {
+            margin: 20px;
+            margin-left: 40px;
+        }
+
+    }
+}
+
+.FrontprojetosAberto{
+    height: 0%;
+    background-color: #1b1871;
+    transition: 1s;
+    h1{
+
+        font-family: 'League Spartan', sans-serif;
+        color: #ffffff !important;
+        font-size: 4vw; 
+        margin-top: 2%;
+        text-align: center !important; 
+    }
+    p {
+        font-family: 'League Spartan', sans-serif;
+        color: #ffffff;
+        font-size: 1.5vw; 
+        margin-top: 30px;
+        text-align: left;
+        margin-inline: 10%;
+    }
+}
+
+
+.setaVoltarBotao, .setaVoltarBotaoBack{
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 3%;
+    width:4%;
+    height: 3px;
+    background-color: #ffffff;
+    position: relative;
+    border: 0;
+}
+
+.setaVoltarBotao::before, .setaVoltarBotaoBack::before{
+    display: flex;
+    justify-content: center;
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    top: calc(0% - 12px);
+    padding: 13px;
+    box-shadow: 2px -2px 0 1px #ffffff inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+}
+
+.setaVoltarBotao:hover, .setaVoltarBotaoBack:hover{
+    background-color: #8887e7;
+    height: 4px;
+    transition: 0.5s;
+    
+}
+.setaVoltarBotao:hover::before, .setaVoltarBotaoBack:hover::before{
+    box-shadow: 3px -3px 0 1px #8887e7 inset;
+    transition: 0.5s;
+}
+
+.projetosfront,.projetosback{
+    overflow: hidden;
+    width: 0%;
+    transition: 1s;
+}
+
+.BackprojetosAberto{
+    height: 0%;
+    background-color: #1b1871;
+    transition: 1s;
+    h1{
+        margin-left: 2%;
+        font-family: 'League Spartan', sans-serif;
+        color: #ffffff !important;
+        font-size: 4vw; 
+        padding-top: 2%;
+        text-align: left !important; 
+    }
+    p {
+        font-family: 'League Spartan', sans-serif;
+        color: #ffffff;
+        font-size: 1.5vw; 
+        margin-top: 30px;
+        text-align: left;
+        margin-inline: 10%;
+    }
+}
+
 }

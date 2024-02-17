@@ -15,9 +15,10 @@ export default function Rodape() {
           <div className="redes">
             <h1>Redes Sociais</h1>
             <ul>
-              <Link><img src={githubIcon} alt="githubIcon" /></Link>
-              <Link><img src={linkedinIcon} alt="linkedinIcon" /></Link>
-              <Link><img src={whatsappIcon} alt="whatsappIcon" /></Link>
+              <Link to={'https://github.com/VitorKubica'} target='_Blank'><img src={githubIcon} alt="githubIcon" /></Link>
+              <Link to={'https://www.linkedin.com/in/vitorkubica/'} target='_Blank'><img src={linkedinIcon} alt="linkedinIcon" /></Link>
+              <Link to={'https://api.whatsapp.com/send?phone=11940138704'} target='_Blank'><img src={whatsappIcon} alt="whatsappIcon" /></Link>
+              
             </ul>
            
           </div>

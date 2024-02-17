@@ -10,7 +10,6 @@
   import helpfila from '/img/Helpfila.webp'
   import contabilizador from '/img/Contabilizador.webp'
   import fiagro from '/img/Fiagro.webp'
-
   import { Link } from 'react-router-dom';
   import { Swiper, SwiperSlide} from 'swiper/react';
   import emailjs from '@emailjs/browser';
@@ -18,17 +17,17 @@
 
   export default function Home() {
     const data = [
-      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
-      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
-      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
-      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+      { id: '1', hd: "Landing page", p: "Landing Page desenvolvida em React.js, focada em uma linha de produto", image: avanttilp, link:'https://avantti-lp.vercel.app/' },
+      { id: '2', hd: "Help Fila", p: "Projeto de uma Startup de redução de filas em hospitais, desenvolvida em next.js, com funcionalidades de compleat search bar e login.", image: helpfila, link:'https://help-fila.vercel.app/' },
+      { id: '3', hd: "contabilizador", p: "Sistema de auxilio a produção, com forte em lógica de programação em js", image: contabilizador, link:'https://masseira.vercel.app/' },
+      { id: '4', hd: "fiagro", p: "Site informativo com HTML, CSS, JS puros", image: fiagro, link:'https://fiagro.vercel.app/' },
     ];
     
     const dataBack = [
-      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp },
-      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila },
-      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador },
-      { id: '4', hd: "fiagro", p: "lalala", image: fiagro },
+      { id: '1', hd: "Biblioteca Java", p: "Projeto de uma biblioteca, com criação de API em JAVA", image: avanttilp, link:'https://github.com/VitorKubica/ProjetoBiblioteca' },
+      { id: '2', hd: "Projeto ML", p: "Projeto de iniciação ao Machine Learning em python", image: helpfila, link:'https://github.com/VitorKubica/MachineLearningIntro' },
+      { id: '3', hd: "Database", p: "Banco de dados com para um projeto da porto seguro, desenvolvido em SQL, manipulação e criação de tabelas", image: contabilizador, link:'/' },
+      { id: '4', hd: "Bot Automação", p: "Bot de automação de tarefas em Python, importante para aprimorar a lógica de programação", image: fiagro, link:'/' },
     ];
     
     const ref1 = useRef(null);
@@ -43,6 +42,7 @@
     });
 
     const handleClick = (ref) => {
+    
       if (ref == 'ref1'){
         ref1.current?.scrollIntoView({ behavior: 'smooth' });
       } if (ref == 'ref2') {
@@ -138,23 +138,33 @@
           </div>
           <div className='conteudosobremim' >
             <h1>SOBRE MIM</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
+            <p>Olá! 
+              <br/> Sou o Vitor, tenho 19 anos e sou estudante de ADS na FIAP. Tenho habilidades como organização, postura ativa, boa comunicação e relacionamento interpessoal, raciocínio lógico e pensamento analítico. <br/>  Vivendo o mundo da programação, sempre em busca de aprender.</p>
             <div className='botoes'>
-              <button className="buttoncontato" type="button">
+              <button className="buttoncontato" type="button" onClick={() => handleClick('ref2')}>
                 <span className="buttoncontato__text">Contato</span>
               </button>
-              <button className="buttondwnld" type="button" onClick={handleDownload}>
+              {/* onClick={handleDownload} */}
+              <button className="buttondwnld" type="button" >
                 <span className="buttondwnld__text">Download CV </span>
                 <span className="buttondwnld__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" className="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
               </button>
             </div>
           </div>
         </section>
-        <section className='XpAc' ref={ref2} id='section3'>
+        <section className='XpAc' id='section3'>
           <div className='XP'>
             <div className='xptxt'>
               <h1>Experiência</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
+              <h2>Avantti Pisos - nov/21 a ago/23</h2>
+              <p>Criação de Landing Page<br/> 
+              Criação de Sistema de automação de tarefas (Python)<br/> 
+              Criação de Sistema Auxiliar de Produção (JS)<br/> 
+              Gestão de integração do sistema ERP com o PCP<br/> 
+              Atendimento ao cliente<br/> 
+              Apoio ao setor de compras<br/> 
+
+              </p>
             </div>
             <div className='xpelementos'>
               <img src={elementoxp} alt='elementos xp' className='elementoxp'/>
@@ -166,7 +176,8 @@
               </div>
             <div className='actxt'>
             <h1>Acadêmico</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
+            <h2>Análise e desenvolvimento de sistemas - Fiap (término dez/24)</h2>
+              <p>Durante dois anos de estudo, está em desenvolvimento meus conhcimentos em Engenharia de Software e Modelos de Negócios, IA, Python, Java, DevOps, .NET, IoT e Mobile App Development, Linguagens de front-end(html/css/js/react.js+vite/next.js/scss), com o auxilio de projetos e cursos (Alura e Nano Cursos)</p>
             </div>
           </div>
         </section>
@@ -176,7 +187,7 @@
           <h1>{projetoAberto === 'projetos' ? 'PROJETOS' : 'Front-End'}</h1>
           </div>
           <div className="conteudoprojeto" >
-          <div className='FrontprojetosAberto' style={{ width: widths.projectsFront }}>
+          <div className='FrontprojetosAberto' style={{ width: widths.projectsFront, }}>
           <button className='setaVoltarBotao' onClick={handleBackArrowClick} style={{ display: parseInt(widths.projectsFront) === 0 ? 'none' : 'block' }}>
             <div className='setaVoltar'></div>
           </button>
@@ -197,7 +208,7 @@
             alt="slider"
             className="slide-item"
           />
-          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} className="conteudoProjetosF">
+          <Link to={item.link} target='_Blank' className="conteudoProjetosF">
             <h1>{item.hd}</h1>
             <p>{item.p}</p>
           </Link>
@@ -206,9 +217,10 @@
           </Swiper>
           </div>
           </div>
-            <div className='projetosfront' style={{ width: widths.front }}>
+          <div className='projetosAll' style={{ width: widths.front }}>
+            <div className='projetosfront' style={{ width: '100%' }}>
               <h1>FRONT-END</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. </p>
+              <p>Projetos desenvolvidos em: <br/> Next.js | React.js+Vite | Html | CSS | JS</p>
               <button id='botaofront' className='botaovermais' onClick={handleFrontButtonClick}>
               <p>Conhecer</p>
               <div className='seta'>
@@ -216,9 +228,9 @@
               </div>
             </button>
             </div>
-            <div className='projetosback' style={{ width: widths.back }}>
-            <h1>BACK-END/DATABASE</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. </p>
+            <div className='projetosback' style={{ width: '100%' }}>
+            <h1>BACK-END & DATABASE</h1>
+            <p>Projetos desenvolvidos em: <br/> Java | Phyton | SqL</p>
               <button id='botaoback' className='botaovermais'  onClick={handleBackButtonClick}>
               <p>Conhecer</p>
               <div className='seta'>
@@ -226,6 +238,7 @@
               </div>
             </button>
             </div>
+          </div>
             <div className='BackprojetosAberto' style={{ width: widths.projectsBack}} >
             <button className='setaVoltarBotao' onClick={handleBackArrowClick} style={{ display: parseInt(widths.projectsBack) === 0 ? 'none' : 'block' }}>
               <div className='setaVoltar'></div>
@@ -247,7 +260,7 @@
             alt="slider"
             className="slide-item"
           />
-          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} className="conteudoProjetosF">
+          <Link to={item.link} target='_Blank'className="conteudoProjetosF">
             <h1>{item.hd}</h1>
             <p>{item.p}</p>
           </Link>
@@ -258,7 +271,7 @@
           </div>
           </div>
         </section>
-        <section className='formulario'>
+        <section className='formulario' ref={ref2}>
           <div className='cabecalhoforms'>
           <h1>
           Se interessou?
