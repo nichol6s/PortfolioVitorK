@@ -17,17 +17,17 @@
 
   export default function Home() {
     const data = [
-      { id: '1', hd: "Landing page", p: "lalala", image: avanttilp, link:'https://avantti-lp.vercel.app/' },
-      { id: '2', hd: "Help Fila", p: "lalala", image: helpfila, link:'https://help-fila.vercel.app/' },
-      { id: '3', hd: "contabilizador", p: "lalala", image: contabilizador, link:'https://masseira.vercel.app/' },
-      { id: '4', hd: "fiagro", p: "lalala", image: fiagro, link:'https://fiagro.vercel.app/' },
+      { id: '1', hd: "Landing page", p: "Landing Page desenvolvida em React.js, focada em uma linha de produto", image: avanttilp, link:'https://avantti-lp.vercel.app/' },
+      { id: '2', hd: "Help Fila", p: "Projeto de uma Startup de redução de filas em hospitais, desenvolvida em next.js, com funcionalidades de compleat search bar e login.", image: helpfila, link:'https://help-fila.vercel.app/' },
+      { id: '3', hd: "contabilizador", p: "Sistema de auxilio a produção, com forte em lógica de programação em js", image: contabilizador, link:'https://masseira.vercel.app/' },
+      { id: '4', hd: "fiagro", p: "Site informativo com HTML, CSS, JS puros", image: fiagro, link:'https://fiagro.vercel.app/' },
     ];
     
     const dataBack = [
-      { id: '1', hd: "Biblioteca Java", p: "lalala", image: avanttilp, link:'https://github.com/VitorKubica/ProjetoBiblioteca' },
-      { id: '2', hd: "Projeto ML", p: "lalala", image: helpfila, link:'https://github.com/VitorKubica/MachineLearningIntro' },
-      { id: '3', hd: "Database", p: "lalala", image: contabilizador, link:'/' },
-      { id: '4', hd: "Bot Automação", p: "lalala", image: fiagro, link:'/' },
+      { id: '1', hd: "Biblioteca Java", p: "Projeto de uma biblioteca, com criação de API em JAVA", image: avanttilp, link:'https://github.com/VitorKubica/ProjetoBiblioteca' },
+      { id: '2', hd: "Projeto ML", p: "Projeto de iniciação ao Machine Learning em python", image: helpfila, link:'https://github.com/VitorKubica/MachineLearningIntro' },
+      { id: '3', hd: "Database", p: "Banco de dados com para um projeto da porto seguro, desenvolvido em SQL, manipulação e criação de tabelas", image: contabilizador, link:'/' },
+      { id: '4', hd: "Bot Automação", p: "Bot de automação de tarefas em Python, importante para aprimorar a lógica de programação", image: fiagro, link:'/' },
     ];
     
     const ref1 = useRef(null);
@@ -42,7 +42,7 @@
     });
 
     const handleClick = (ref) => {
-        preventDefault()
+    
       if (ref == 'ref1'){
         ref1.current?.scrollIntoView({ behavior: 'smooth' });
       } if (ref == 'ref2') {
@@ -138,7 +138,8 @@
           </div>
           <div className='conteudosobremim' >
             <h1>SOBRE MIM</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
+            <p>Olá! 
+              <br/> Sou o Vitor, tenho 19 anos e sou estudante de ADS na FIAP. Com habilidades como organização, postura ativa, boa comunicação e relacionamento interpessoal, raciocínio lógico e pensamento analítico. <br/>  Vivendo o mundo da programação, sempre em busca de aprender.</p>
             <div className='botoes'>
               <button className="buttoncontato" type="button" onClick={() => handleClick('ref2')}>
                 <span className="buttoncontato__text">Contato</span>
@@ -154,7 +155,15 @@
           <div className='XP'>
             <div className='xptxt'>
               <h1>Experiência</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
+              <h2>Avantti Pisos - nov/21 a ago/23</h2>
+              <p>Criação de Landing Page<br/> 
+              Criação de Sistema de automação de tarefas (Python)<br/> 
+              Criação de Sistema Auxiliar de Produção (JS)<br/> 
+              Gestão de integração do sistema ERP com o PCP<br/> 
+              Atendimento ao cliente<br/> 
+              Apoio ao setor de compras<br/> 
+
+              </p>
             </div>
             <div className='xpelementos'>
               <img src={elementoxp} alt='elementos xp' className='elementoxp'/>
@@ -166,7 +175,8 @@
               </div>
             <div className='actxt'>
             <h1>Acadêmico</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. Aenean tincidunt lacus eget purus dictum, congue imperdiet neque eleifend. Duis nulla mauris, volutpat ut placerat in, ornare quis lacus. In suscipit nunc dui, id aliquam turpis pharetra vel.</p>
+            <h2>Análise e desenvolvimento de sistemas - Fiap (término dez/24)</h2>
+              <p>Durante dois anos de estudo, está em desenvolvimento meus conhcimentos em Engenharia de Software e Modelos de Negócios, IA, Python, Java, DevOps, .NET, IoT e Mobile App Development, Linguagens de front-end(html/css/js/react.js+vite/next.js/scss), com o auxilio de projetos e cursos (Alura e Nano Cursos)</p>
             </div>
           </div>
         </section>
@@ -208,7 +218,7 @@
           </div>
             <div className='projetosfront' style={{ width: widths.front }}>
               <h1>FRONT-END</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. </p>
+              <p>Projetos desenvolvidos em: <br/> Next.js | React.js+Vite | Html | CSS | JS</p>
               <button id='botaofront' className='botaovermais' onClick={handleFrontButtonClick}>
               <p>Conhecer</p>
               <div className='seta'>
@@ -218,7 +228,7 @@
             </div>
             <div className='projetosback' style={{ width: widths.back }}>
             <h1>BACK-END/DATABASE</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo tellus, eget blandit urna consequat sit amet. </p>
+            <p>Projetos desenvolvidos em: <br/> Java | Phyton | SqL</p>
               <button id='botaoback' className='botaovermais'  onClick={handleBackButtonClick}>
               <p>Conhecer</p>
               <div className='seta'>
@@ -247,7 +257,7 @@
             alt="slider"
             className="slide-item"
           />
-          <Link to={"https://api.whatsapp.com/send?phone=11940138704"} className="conteudoProjetosF" target='_blank'>
+          <Link to={item.link} target='_Blank'className="conteudoProjetosF">
             <h1>{item.hd}</h1>
             <p>{item.p}</p>
           </Link>

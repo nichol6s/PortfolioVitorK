@@ -107,14 +107,14 @@
     h1 {
         font-family: 'League Spartan', sans-serif;
         color: #F8F8F8;
-        font-size: 5vw; 
+        font-size:5vw ; 
         width: 70%;
     }
 
     p {
         font-family: 'League Spartan', sans-serif;
         color: #F8F8F8;
-        font-size: 2vw; 
+        font-size: 2vw ; 
         margin-top: 30px;
     }
 
@@ -365,7 +365,7 @@
     // Estilos para as seções "XP" e "AC" individualmente
     .XP, .AC {
         display: flex;
-        margin-inline: 10%;
+        width: 80%;
 
         img {
             height: 60%;
@@ -377,13 +377,19 @@
             font-size: 5vw; 
             text-align: justify;
         }
-
+        h2{
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: 1.8vw; 
+            text-align: justify;
+            margin-top: 1%;
+        }
         p {
             font-family: 'League Spartan', sans-serif;
             color: #F8F8F8;
             font-size: 1.5vw; 
             margin-top: 30px;
-            text-align: justify;
+            text-align: left;
         }
 
         .actxt {
@@ -391,7 +397,7 @@
         }
 
         .xptxt {
-            margin-right: 20%;
+            margin-right: 15%;
         }
     }
 
@@ -849,3 +855,44 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .conteudo .apresentacao{
+        flex-direction: column-reverse;
+    }
+    .apresentacao {
+        .imagem {  
+            height: 50% !important;
+            margin-right: 0%;
+            .foto {
+                height: 80% !important;
+                left: 35% !important;
+            }
+            .elementosfundo {
+                height: 80% !important;
+                right: 60% !important;
+            }
+        }
+    }
+    .textoap {
+        display: flex;
+        flex-direction: column;
+        columns: 1;
+        justify-content: center;
+        margin-left: 10vh;
+    
+        h1 {
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size:calc(5vw + 20px) ; 
+            width: 70%;
+        }
+    
+        p {
+            font-family: 'League Spartan', sans-serif;
+            color: #F8F8F8;
+            font-size: calc(2vw + 20px) ; 
+            margin-top: 30px;
+        }
+    
+}}
