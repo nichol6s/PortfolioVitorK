@@ -9,20 +9,26 @@ export default function Cabecalho() {
     setMenuAberto(!menuAberto);
   };
 
-  const handleClick = (ref) => {
-    if (ref == 'ref1'){
-      ref1.current?.scrollIntoView({ behavior: 'smooth' });
-    } if (ref == 'ref2') {
-      ref2.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+//   const handleClick = (ref) => {
+//     if (ref == 'ref1'){
+//       ref1.current?.scrollIntoView({ behavior: 'smooth' });
+//     } if (ref == 'ref2') {
+//       ref2.current?.scrollIntoView({ behavior: 'smooth' });
+//     };
     
-};
+// };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if(section){
+      section.scrollIntoView({ behavior: "smooth"});
+    }
+  }
 
   return (
     <>
       <header className={`cabecalho ${menuAberto ? 'menu-aberto' : ''}`}>
-        <Link onClick={() => handleClick(ref2)} className="logo">
+        <Link onClick={() => scrollToSection("section1")} to="#" className="logo">
           <h1>VITOR KUBICA</h1>
         </Link>
         <div className="mobile-menu" onClick={toggleMenu}>
@@ -32,9 +38,9 @@ export default function Cabecalho() {
         </div>
       </header>
       <div className={`menu-conteudo ${menuAberto ? 'menu-aberto' : ''}`}>
-        <Link to="/">Sobre mim</Link>
-        <Link to="/">Projetos</Link>
-        <Link to="/">Contato</Link>
+        <Link onClick={() => scrollToSection("section2")} to="#">Sobre mim</Link>
+        <Link onClick={() => scrollToSection("section4")} to="#">Projetos</Link>
+        <Link onClick={() => scrollToSection("section5")} to="#">Contato</Link>
       </div>
       
     </>

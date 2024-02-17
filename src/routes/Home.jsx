@@ -181,7 +181,7 @@
             </div>
           </div>
         </section>
-        <section className='projetos'>
+        <section className='projetos' id='section4'>
           <div className='elementoprojeto'>
           <img src={elementoprjt} alt='elemento projeto' className='elementoprjt'/>
           <h1>{projetoAberto === 'projetos' ? 'PROJETOS' : 'Front-End'}</h1>
@@ -271,7 +271,7 @@
           </div>
           </div>
         </section>
-        <section className='formulario' ref={ref2}>
+        <section className='formulario' id='section5' ref={ref2}>
           <div className='cabecalhoforms'>
           <h1>
           Se interessou?
