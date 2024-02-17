@@ -197,7 +197,7 @@
             alt="slider"
             className="slide-item"
           />
-          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} className="conteudoProjetosF">
+          <Link to={"https://api.whatsapp.com/send?phone=11940138704"} className="conteudoProjetosF">
             <h1>{item.hd}</h1>
             <p>{item.p}</p>
           </Link>
@@ -247,7 +247,7 @@
             alt="slider"
             className="slide-item"
           />
-          <Link to={"https://api.whatsapp.com/send?phone=551123397412"} className="conteudoProjetosF">
+          <Link to={"https://api.whatsapp.com/send?phone=11940138704"} className="conteudoProjetosF" target='_blank'>
             <h1>{item.hd}</h1>
             <p>{item.p}</p>
           </Link>
