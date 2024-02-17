@@ -407,6 +407,11 @@
 }
 
 .projetos{
+    .projetosAll{
+        display: flex;
+        width: 100%;
+        transition: 1s;
+    }
     background-color: #cfcabf;
     .projetosfront, .projetosback{
         display: flex;
@@ -858,7 +863,7 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 650px) {
     .XpAc .XP img, .XpAc .AC img{
         display: none;
     }
@@ -873,11 +878,11 @@
             margin-right: 0%;
             .foto {
                 height: 80% !important;
-                left: 35% !important;
+                left: 32% !important;
             }
             .elementosfundo {
                 height: 80% !important;
-                right: 52% !important;
+                right: 80% !important;
             }
         }
     }
@@ -984,30 +989,10 @@
 }
 
 .projetos{
-    .projetosfront, .projetosback{
-        display: flex;
-        flex-direction: column;
-        columns: 1;
-        align-items: center;
-        justify-content: center;
-    }
     .elementoprojeto{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        max-height: 10%;
-        z-index: 1;
-        top: 13%;
         width: 100%;
         h1{
-            position: absolute;
-            z-index: 3;
-            font-family: 'League Spartan', sans-serif;
-            color: #F8F8F8;
-            font-size: 4vw; 
-            padding-top: 2%;
-            text-align: center;
+            font-size: calc(4vw + 16px); 
         }
         img{
             width: 30vh;
@@ -1015,122 +1000,28 @@
     }
     .conteudoprojeto{
         flex-direction: column;
-        position: relative;
-        background-color: #f8f8f8;
-        margin-top: 15vh;
-        margin-inline: 5%;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         h1{
-            font-family: 'League Spartan', sans-serif;
-            color: #4643DF;
-            font-size: 4vw; 
-            padding-top: 2%;
-            text-align: center; 
+            font-size: calc(4vw + 16px) !important;  
+            width: 80%;
         }
         p {
-            font-family: 'League Spartan', sans-serif;
-            color: #5a58c5 !important;
-            font-size: 1.5vw; 
-            margin-top: 30px;
-            text-align: center;
-            margin-inline: 10%;
+            font-size: calc(1.5vw + 16px); 
+            padding-top: 0%;
+            margin-top: 2%;
         }
+    }
+    .projetosback{
+        margin-top: 10%;
+
     }
 
     .botaovermais {
-        // Estilos para o botão "Ver Mais"
-        cursor: pointer;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        margin-top: 30px;
-        text-decoration: none;
-        border: 1px solid #4643DF;
-        width: 60%;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        scroll-behavior: smooth;
 
         p {
             margin: 20px;
             margin-left: 40px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            width: 50%;
         }
 
-        .seta {
-            height: 100%;
-            width: 60%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        // Estilos para a seta do botão "Ver Mais"
-        .setacorpo {
-            width: 50%;
-            height: 3px;
-            background-color: #4643DF;
-            position: relative;
-        }
-
-        .setacorpo::before {
-            display: flex;
-            justify-content: center;
-            content: "";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 100%;
-            width: 0;
-            height: 0;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-radius: 20%;
-            border-left: 8px solid #4643DF;
-        }
-    }
-
-    // Efeitos de hover para o botão "Ver Mais"
-    .botaovermais::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #4643DF;
-        transform: translateX(-100%);
-        transition: all .3s;
-        z-index: -1;
-    }
-
-    .botaovermais:hover::before {
-        transform: translateX(0);
-    }
-
-    .botaovermais:hover {
-        p, h1 {
-            color: #FFF !important;
-            transition: 0.5s;
-        }
-
-        .setacorpo {
-            background-color: #ffffff;
-            transition: 0.5s;
-        }
-
-        .setacorpo::before {
-            border-left: 8px solid #FFF;
-            transition: 0.5s;
-        }
     }
 }
 

@@ -187,7 +187,7 @@
           <h1>{projetoAberto === 'projetos' ? 'PROJETOS' : 'Front-End'}</h1>
           </div>
           <div className="conteudoprojeto" >
-          <div className='FrontprojetosAberto' style={{ width: widths.projectsFront }}>
+          <div className='FrontprojetosAberto' style={{ width: widths.projectsFront, }}>
           <button className='setaVoltarBotao' onClick={handleBackArrowClick} style={{ display: parseInt(widths.projectsFront) === 0 ? 'none' : 'block' }}>
             <div className='setaVoltar'></div>
           </button>
@@ -217,7 +217,8 @@
           </Swiper>
           </div>
           </div>
-            <div className='projetosfront' style={{ width: widths.front }}>
+          <div className='projetosAll' style={{ width: widths.front }}>
+            <div className='projetosfront' style={{ width: '100%' }}>
               <h1>FRONT-END</h1>
               <p>Projetos desenvolvidos em: <br/> Next.js | React.js+Vite | Html | CSS | JS</p>
               <button id='botaofront' className='botaovermais' onClick={handleFrontButtonClick}>
@@ -227,8 +228,8 @@
               </div>
             </button>
             </div>
-            <div className='projetosback' style={{ width: widths.back }}>
-            <h1>BACK-END/DATABASE</h1>
+            <div className='projetosback' style={{ width: '100%' }}>
+            <h1>BACK-END & DATABASE</h1>
             <p>Projetos desenvolvidos em: <br/> Java | Phyton | SqL</p>
               <button id='botaoback' className='botaovermais'  onClick={handleBackButtonClick}>
               <p>Conhecer</p>
@@ -237,6 +238,7 @@
               </div>
             </button>
             </div>
+          </div>
             <div className='BackprojetosAberto' style={{ width: widths.projectsBack}} >
             <button className='setaVoltarBotao' onClick={handleBackArrowClick} style={{ display: parseInt(widths.projectsBack) === 0 ? 'none' : 'block' }}>
               <div className='setaVoltar'></div>
